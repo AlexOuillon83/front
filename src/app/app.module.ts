@@ -10,12 +10,29 @@ import { TutorialsListComponent } from './components/tutorials-list/tutorials-li
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+// INVOICE COMPONENTS IMPORT
+import { InvoiceDetailsComponent } from './components/invoice/invoice-details/invoice-details.component';
+import { AddInvoiceComponent } from './components/invoice/add-invoice/add-invoice.component';
+import { InvoicesListComponent } from './components/invoice/invoices-list/invoices-list.component';
+
+// PAYMENT COMPONENTS IMPORT
+import { PaymentDetailsComponent } from './components/payment/payment-details/payment-details.component';
+import { AddPaymentComponent } from './components/payment/add-payment/add-payment.component';
+import { PaymentListComponent } from './components/payment/payment-list/payment-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     AddTutorialComponent,
     TutorialDetailsComponent,
-    TutorialsListComponent
+    TutorialsListComponent,
+    InvoiceDetailsComponent,
+    AddInvoiceComponent,
+    InvoicesListComponent,
+    PaymentDetailsComponent,
+    AddPaymentComponent,
+    PaymentListComponent
+
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,61 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <!-- Memo -->
+        <div class="form-group">
+          <label for="title">Memo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            required
+            [(ngModel)]="invoice.memo"
+            name="title"
+          />
+        </div>
+  
+        <!-- Sender -->
+        <div class="form-group">
+          <label for="description">Sender</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="invoice.sender"
+            name="description"
+          />
+        </div>
+
+        <!-- Receiver -->
+        <div class="form-group">
+          <label for="description">Receiver</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="invoice.receiver"
+            name="description"
+          />
+        </div>
+
+        <!-- Amount -->
+        <div class="form-group">
+          <label for="description">Amount</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="invoice.amount"
+            name="description"
+          />
+        </div>
+  
+        <button (click)="saveInvoice()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>Invoice was submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newInvoice()">Add</button>
+      </div>
+    </div>
+  </div>
