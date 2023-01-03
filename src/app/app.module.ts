@@ -19,6 +19,10 @@ import { InvoicesListComponent } from './components/invoice/invoices-list/invoic
 import { PaymentDetailsComponent } from './components/payment/payment-details/payment-details.component';
 import { AddPaymentComponent } from './components/payment/add-payment/add-payment.component';
 import { PaymentListComponent } from './components/payment/payment-list/payment-list.component';
+import { HomeInvoiceComponent } from './components/invoice/home-invoice/home-invoice.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { WalletComponent } from './components/wallet/wallet.component';
+
 
 @NgModule({
   declarations: [
@@ -31,8 +35,10 @@ import { PaymentListComponent } from './components/payment/payment-list/payment-
     InvoicesListComponent,
     PaymentDetailsComponent,
     AddPaymentComponent,
-    PaymentListComponent
-
+    PaymentListComponent,
+    HomeInvoiceComponent,
+    NavbarComponent,
+    WalletComponent,
   ],
   imports: [
     BrowserModule,

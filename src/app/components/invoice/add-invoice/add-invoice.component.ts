@@ -3,7 +3,7 @@ import { Invoice } from 'src/app/models/invoice.model';
 import { InvoiceService } from 'src/app/services/invoice.service';
 
 @Component({
-  selector: 'app-add-tutorial',
+  selector: 'app-add-invoice',
   templateUrl: './add-invoice.component.html',
   styleUrls: ['./add-invoice.component.css']
 })

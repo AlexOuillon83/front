@@ -1,1 +1,44 @@
-<p>invoices-list works!</p>
+<div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by title"
+          [(ngModel)]="title"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchTitle()"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h4>Invoices List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let invoice of invoices; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveInvoice(invoice, i)"
+        >
+          {{ invoice.memo }}
+        </li>
+      </ul>
+  
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllInvoices()">
+        Remove All Invoices
+      </button>
+    </div>
+    <div class="col-md-6">
+      <app-invoice-details
+        [viewMode]="true"
+        [currentInvoice]="currentInvoice"
+      ></app-invoice-details>
+    </div>
+  </div>
